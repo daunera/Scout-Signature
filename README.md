@@ -13,7 +13,11 @@ __0.1 (2017.12.29)__
 
 ### Pár példa
 
-![](/../master/pics/sign1.png)
+![](https://github.com/daunera/Scout-Signature/blob/master/pics/sign01.PNG)
+![](https://github.com/daunera/Scout-Signature/blob/master/pics/sign06.PNG)
+![](https://github.com/daunera/Scout-Signature/blob/master/pics/sign10.PNG)
+
+__[MÉG TÖBB KONCEPCIÓ](https://github.com/daunera/Scout-Signature/tree/master/pics)__
 
 ## Felület elemei:
 
