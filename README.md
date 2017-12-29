@@ -6,7 +6,7 @@
 - Felületi elemek leírása
 - Telepítés és használat
 
-Deployment ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67w9D1JD5VO__
+Deployment/Telepítés ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67w9D1JD5VO__
 
 Ennek az add-on-nak a segítségével a Gmail webes és mobilos felületéről könnyen beilleszthetsz egy-egy levélbe a cserkész email aláírásodat. Így nem kell állandóra beállítani vagy ha csak alkalomról  alkalomra használod, nem kell ECSET-ből kimásolnod. Akkor is hasznos lehet, ha egyszerre több megbizatás kapcsán használnz ilyen aláírást, könnyen generálhatsz ilyet is-olyat is.
 
@@ -23,7 +23,7 @@ __0.1 (2017.12.29)__
 ![](https://github.com/daunera/Scout-Signature/blob/master/pics/sign06.PNG)
 ![](https://github.com/daunera/Scout-Signature/blob/master/pics/sign10.PNG)
 
-__[MÉG TÖBB KONCEPCIÓ](https://github.com/daunera/Scout-Signature/tree/master/pics)__
+__[MÉG TÖBB KONCEPCIÓ](https://photos.app.goo.gl/nKFlu7gx5Hiv5Vc23)__
 
 ## Felület elemei
 
