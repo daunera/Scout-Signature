@@ -74,4 +74,10 @@ Webes felületen a levelek melleti jobb oldali sávon, mobilon pedig a levél al
 ### Telepítést követő első használatkor
 [Eredeti angol nyelvű leírás](https://developers.google.com/gmail/add-ons/how-tos/authorizing)
 
-Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasznűlóhoz kötve.
+Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasználóhoz kötve.
+
+Azért leírom melyik engedély mire kell:
+- _Futtatás Gmail-bővítményként_: Minden Gmail bövítménynél kötelező hozzáférést kérni, elérhetővá teszi az email címed lekérését is a bővítmény számára
+- _Email-üzenetek megtekintése_: A megnyitott üzenet azonosítójának lekérésére kell, hogy lehessen válaszlevelet létrehozni.
+- _Piszkozatok kezelése és e-mailek küldése_: Piszkozatok létrehozására kell
+- _Az alkalmazáshoz társított adatok megtekintése és kezelése_: Ez engedéllyel lehet csak eltárolni a kitöltéseket, csak az alkalmazás érheti el, más senki.
