@@ -1,14 +1,11 @@
 var SECONDARY_COLOR = '#0075bf';
-var COLORS = ['Trendizöld','WOSM-lila','Narancssárga','Világoskék','Piros','Gesztenyebarna','Türkizkék'];
+var COLORS = ['Trendizöld','WOSM-lila','Narancssárga','Világoskék','Piros','Gesztenyebarna','Türkizkék','#48B84F'];
 
 function buildAddOn(e) {
-  var accessToken = e.messageMetadata.accessToken;
-  GmailApp.setCurrentMessageAccessToken(accessToken);
-  
   return [buildUI()];
 }
 
-function buildUI(status) {
+function buildUI() {
   var card = CardService.newCardBuilder();
   
   card.addCardAction(CardService.newCardAction()
@@ -23,13 +20,13 @@ function buildUI(status) {
     .setTitle('Hozz létre saját aláírást!')
     .setImageUrl('https://ecset-static.cserkesz.net/static/alairas/mcssz_alairas.png'));
   
-  var section = buildSection(status);
-  card.addSection(section);
+  card.addSection(buildEditSection());
+  card.addSection(buildEndSection());
   
   return card.build();
 }
 
-function buildSection(status){
+function buildEditSection(){
   var section = CardService.newCardSection();
   
   section
@@ -45,10 +42,11 @@ function buildSection(status){
       .setFieldName('level')
       .setTitle('Képesítés')
       .setType(CardService.SelectionInputType.DROPDOWN)
-      .addItem('-', '', true)
-      .addItem('őrsvezető', 'őv.', false)
-      .addItem('segédtiszt', 'csst.', false)
-      .addItem('cserkésztiszt', 'cst.', false))
+      .setOnChangeAction(CardService.newAction().setFunctionName('saveAction'))
+      .addItem('-', '', getValue('level',''))
+      .addItem('őrsvezető', 'őv.', getValue('level','őv.'))
+      .addItem('segédtiszt', 'csst.', getValue('level','csst.'))
+      .addItem('cserkésztiszt', 'cst.', getValue('level','cst.')))
     .addWidget(buildTextInput('rank','Megbizatás'))
     .addWidget(buildTextInput('rankTeam','Megbizatás egysége'))
     .addWidget(buildTextInput('address','Cím'));
@@ -61,50 +59,40 @@ function buildSection(status){
     .addWidget(buildTextInput('logoUrl','Logó URL'))
     .addWidget(buildTextInput('title','Logó alatti szöveg'))
     .addWidget(buildTextInput('titleUrl','Logó alatti szöveg linkje'))
-    
-  section
-    .addWidget(CardService.newTextParagraph().setText('<b><font color="'+SECONDARY_COLOR+'">Létrehozás</font></b>'))
-    /*.addWidget(CardService.newSelectionInput()
-      .setFieldName('save')
-      .setType(CardService.SelectionInputType.CHECK_BOX)
-      .addItem('Jegyezd meg', 'saveIt', false))
-    .addWidget(CardService.newTextParagraph().setText('Állapot: OKÉ'))*/;
-    
-   var action =  CardService.newAction().setFunctionName('compose');
-   section 
-    .addWidget(CardService.newButtonSet()
-      .addButton(CardService.newTextButton()
-        .setText('Új email')
-        .setComposeAction(action, CardService.ComposedEmailType.STANDALONE_DRAFT))
-      /*.addButton(CardService.newTextButton()
-        .setText('Válasz erre')
-        .setComposeAction(action, CardService.ComposedEmailType.REPLY_AS_DRAFT))*/);
   
   return section;
 }
 
-function buildTextInput(fieldName, title, value, action){
+function buildEndSection(){
+  var section = CardService.newCardSection();
+  
+  section
+  .addWidget(CardService.newSelectionInput()
+    .setFieldName('save')
+    .setType(CardService.SelectionInputType.CHECK_BOX)
+    .setOnChangeAction(CardService.newAction().setFunctionName('saveAction'))
+    .addItem('Beállítások megjegyzése', 'saveIt', getValue('save')));
+  
+  section 
+  .addWidget(CardService.newButtonSet()
+    .addButton(CardService.newTextButton()
+      .setText('Új email')
+      .setComposeAction(CardService.newAction().setFunctionName('compose'), CardService.ComposedEmailType.STANDALONE_DRAFT))
+    .addButton(CardService.newTextButton()
+      .setText('Válasz erre')
+      .setComposeAction(CardService.newAction().setFunctionName('composeReply'), CardService.ComposedEmailType.REPLY_AS_DRAFT)));
+      
+  return section;
+}
+
+
+function buildTextInput(fieldName, title){
 
   var textInput = CardService.newTextInput()
     .setFieldName(fieldName)
-    .setTitle(title);
+    .setTitle(title)
+    .setOnChangeAction(CardService.newAction().setFunctionName('saveAction'))
+    .setValue(getValue(fieldName));
   
   return textInput;
-}
-
-function compose(e){
-  var accessToken = e.messageMetadata.accessToken;
-  GmailApp.setCurrentMessageAccessToken(accessToken);
-  
-  var res = e['formInput'];
-  
-  var check = validation(res);
-  
-  if(check == 'Ok'){
-    var draft = GmailApp.createDraft('', '', '', {htmlBody: 'Ide írj!<br><br>'+createSignature(res)});
-    return CardService.newComposeActionResponseBuilder().setGmailDraft(draft).build();
-  }
-  else
-    Logger.log('ERROR: '+check);
-    return null;
 }
