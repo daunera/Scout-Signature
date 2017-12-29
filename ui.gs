@@ -2,10 +2,10 @@ var SECONDARY_COLOR = '#0075bf';
 var COLORS = ['Trendizöld','WOSM-lila','Narancssárga','Világoskék','Piros','Gesztenyebarna','Türkizkék','#48B84F'];
 
 function buildAddOn(e) {
-  return [buildUI()];
+  return [buildUI('')];
 }
 
-function buildUI() {
+function buildUI(status) {
   var card = CardService.newCardBuilder();
   
   card.addCardAction(CardService.newCardAction()
@@ -21,7 +21,7 @@ function buildUI() {
     .setImageUrl('https://ecset-static.cserkesz.net/static/alairas/mcssz_alairas.png'));
   
   card.addSection(buildEditSection());
-  card.addSection(buildEndSection());
+  card.addSection(buildEndSection(status));
   
   return card.build();
 }
@@ -63,7 +63,7 @@ function buildEditSection(){
   return section;
 }
 
-function buildEndSection(){
+function buildEndSection(status){
   var section = CardService.newCardSection();
   
   section
@@ -73,14 +73,17 @@ function buildEndSection(){
     .setOnChangeAction(CardService.newAction().setFunctionName('saveAction'))
     .addItem('Beállítások megjegyzése', 'saveIt', getValue('save')));
   
+  var composeAction = CardService.newAction().setFunctionName('compose');
   section 
   .addWidget(CardService.newButtonSet()
     .addButton(CardService.newTextButton()
       .setText('Új email')
-      .setComposeAction(CardService.newAction().setFunctionName('compose'), CardService.ComposedEmailType.STANDALONE_DRAFT))
+      .setComposeAction(composeAction.setParameters({reply: 'no'}), CardService.ComposedEmailType.STANDALONE_DRAFT))
     .addButton(CardService.newTextButton()
       .setText('Válasz erre')
-      .setComposeAction(CardService.newAction().setFunctionName('composeReply'), CardService.ComposedEmailType.REPLY_AS_DRAFT)));
+      .setComposeAction(composeAction.setParameters({reply: 'yes'}), CardService.ComposedEmailType.REPLY_AS_DRAFT)));
+      
+  //section.addWidget(CardService.newTextParagraph().setText(status));
       
   return section;
 }

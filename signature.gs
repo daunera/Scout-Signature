@@ -112,6 +112,9 @@ function setLogoUrl(logoUrl){
 function setTitle(title){
   if (title == undefined)
     title = 'cserkesz.hu';
+  if (/\S+_\S+/.test(title)){
+    title = title.replace('_','<br>');
+  }
     
   return title;
 }

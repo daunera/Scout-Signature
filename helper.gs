@@ -18,26 +18,16 @@ function compose(e){
   var res = e['formInput'];  
   var check = validation(res);
   
+  var draft;
   if(check == 'Ok'){
-    var draft = GmailApp.createDraft('', '', '', {htmlBody: 'Ide írj!<br><br>'+createSignature(res)});
-    return CardService.newComposeActionResponseBuilder().setGmailDraft(draft).build();
-  }
-  else
-    Logger.log('ERROR: '+check);
-    return null;
-}
-
-function composeReply(e){
-  var accessToken = e.messageMetadata.accessToken;
-  var messageId = e.messageMetadata.messageId;
-  GmailApp.setCurrentMessageAccessToken(accessToken);
-  var message = GmailApp.getMessageById(messageId);
-  
-  var res = e['formInput'];  
-  var check = validation(res);
-  
-  if(check == 'Ok'){
-    var draft = message.createDraftReply('',{htmlBody: 'Ide írj!<br><br>'+createSignature(res)});
+    var htmlBody = 'Szöveg helye<br><br>'+createSignature(res);
+    if(e['parameters']['reply'] == 'yes'){
+      var messageId = e.messageMetadata.messageId;
+      var message = GmailApp.getMessageById(messageId);
+      draft = message.createDraftReply('',{htmlBody: htmlBody});
+    }
+    else
+      draft = GmailApp.createDraft('', '', '', {htmlBody: htmlBody});
     return CardService.newComposeActionResponseBuilder().setGmailDraft(draft).build();
   }
   else
@@ -66,9 +56,7 @@ function saveAction(e){
   var properties = PropertiesService.getUserProperties();
   properties.deleteAllProperties();
   if('save' in res){
-    var keys = Object.keys(res);
-    for(var i=0; i<keys.length ; i++)
-      properties.setProperty(keys[i], res[keys[i]]);
+    properties.setProperties(res, true);
   }
 }
 
