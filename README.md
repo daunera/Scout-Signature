@@ -1,17 +1,23 @@
 # Aláírás generáló Gmail Bővítmény ![](https://www.gstatic.com/images/icons/material/system/2x/gesture_black_24dp.png)
 
+### Tartalomjegyzék:
+- Changelog
+- Pár példa koncepció
+- Felületi elemek leírása
+- Telepítés és használat
+
 Deployment ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67w9D1JD5VO__
 
 Ennek az add-on-nak a segítségével a Gmail webes és mobilos felületéről könnyen beilleszthetsz egy-egy levélbe a cserkész email aláírásodat. Így nem kell állandóra beállítani vagy ha csak alkalomról  alkalomra használod, nem kell ECSET-ből kimásolnod. Akkor is hasznos lehet, ha egyszerre több megbizatás kapcsán használnz ilyen aláírást, könnyen generálhatsz ilyet is-olyat is.
 
 Ezen felül megvan a lehetőség, hogy a szokásos szövetségi opciók (logó, link, színek) mellett sajátot készíts, saját egységed, csapatod számára.
 
-### Changelog / Változások
+## Changelog / Változások
 
 __0.1 (2017.12.29)__
 - Első verzió
 
-### Pár példa
+## Pár példa
 
 ![](https://github.com/daunera/Scout-Signature/blob/master/pics/sign01.PNG)
 ![](https://github.com/daunera/Scout-Signature/blob/master/pics/sign06.PNG)
@@ -19,7 +25,7 @@ __0.1 (2017.12.29)__
 
 __[MÉG TÖBB KONCEPCIÓ](https://github.com/daunera/Scout-Signature/tree/master/pics)__
 
-## Felület elemei:
+## Felület elemei
 
 - __Név__: Kötelező kitölteni, teljes név
 - __Email__: Kötelező kitölteni, érvényes email címnek kell lennie, történik ellenőrzés, ajánlatként a saját email cím mindig megjelenik
