@@ -10,7 +10,7 @@ function buildUI(status) {
   
   card.addCardAction(CardService.newCardAction()
     .setText('Segítség')
-    .setOpenLink(CardService.newOpenLink().setUrl('https://github.com/daunera/Scout-Signature')));
+    .setOpenLink(CardService.newOpenLink().setUrl('https://github.com/daunera/Scout-Signature/blob/master/README.md')));
     
   card.addCardAction(CardService.newCardAction()
     .setText('Visszajelzés')
