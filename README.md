@@ -1,10 +1,10 @@
 # Aláírás generáló Gmail Bővítmény ![](https://www.gstatic.com/images/icons/material/system/2x/gesture_black_24dp.png)
 
 ### Tartalomjegyzék:
-- Changelog
-- Pár példa koncepció
-- Felületi elemek leírása
-- Telepítés és használat
+- [Changelog](https://github.com/daunera/Scout-Signature/blob/master/README.md#changelog--v%C3%A1ltoz%C3%A1sok)
+- [Pár példa koncepció](https://github.com/daunera/Scout-Signature/blob/master/README.md#p%C3%A1r-p%C3%A9lda)
+- [Felületi elemek leírása](https://github.com/daunera/Scout-Signature/blob/master/README.md#fel%C3%BClet-elemei)
+- [Telepítés és használat](https://github.com/daunera/Scout-Signature/blob/master/README.md#telep%C3%ADt%C3%A9s-%C3%A9s-haszn%C3%A1latba-v%C3%A9tel)
 
 Deployment/Telepítés ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67w9D1JD5VO__
 
@@ -23,7 +23,7 @@ __0.1 (2017.12.29)__
 ![](https://github.com/daunera/Scout-Signature/blob/master/pics/sign06.PNG)
 ![](https://github.com/daunera/Scout-Signature/blob/master/pics/sign10.PNG)
 
-__[MÉG TÖBB KONCEPCIÓ](https://photos.app.goo.gl/nKFlu7gx5Hiv5Vc23)__
+__[MÉG TÖBB KONCEPCIÓ ITT](https://photos.app.goo.gl/nKFlu7gx5Hiv5Vc23)__
 
 ## Felület elemei
 
