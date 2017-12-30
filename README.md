@@ -1,12 +1,10 @@
-# Aláírás generáló Gmail Bővítmény ![](https://www.gstatic.com/images/icons/material/system/2x/gesture_black_24dp.png)
+# MCSSZ Aláírás generáló Gmail Bővítmény
 
 ### Tartalomjegyzék:
 - [Changelog](https://github.com/daunera/Scout-Signature/blob/master/README.md#changelog--v%C3%A1ltoz%C3%A1sok)
 - [Koncepció képek](https://github.com/daunera/Scout-Signature/blob/master/README.md#koncepci%C3%B3-k%C3%A9pek)
 - [Felületi elemek leírása](https://github.com/daunera/Scout-Signature/blob/master/README.md#fel%C3%BClet-elemei)
 - [Telepítés és használat](https://github.com/daunera/Scout-Signature/blob/master/README.md#telep%C3%ADt%C3%A9s-%C3%A9s-haszn%C3%A1latba-v%C3%A9tel)
-
-Deployment/Telepítés ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67w9D1JD5VO__
 
 Ennek az add-on-nak a segítségével a Gmail webes és mobilos felületéről könnyen beillesztheted egy-egy levélbe a cserkész email aláírásodat. Így nem kell állandóra beállítani vagy ha csak alkalomról alkalomra használod, nem kell ECSET-ből kimásolnod. Akkor is hasznos lehet, ha egyszerre több megbizatás kapcsán használsz ilyen aláírást, könnyen generálhatsz ilyet is-olyat is.
 
@@ -59,6 +57,10 @@ Ezen felül az jobb felső sarokban lévő almenüből
 ## Telepítés és használatba vétel
 [Eredeti angol nyelvű leírás telepítéshez](https://developers.google.com/gmail/add-ons/how-tos/install-unpublished)
 Egyenlőre semmilyen Gmail Add-on-t nem lehet publikálni, mert az egész add-on rendszer friss dolog. Csak fejlesztői bővítményként lehet telepíteni @gmail.com-os accountról.
+
+
+Deployment/Telepítés ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67w9D1JD5VO__
+
 
 1. [Nyisd meg a Gmail Add-on/Bővítmények beállítás fülét](https://mail.google.com/mail/#settings/addons)
 2. A Bővítmények fülön ellenőrizd, hogy a __Fejlesztői bővítmények bekapcsolása a fiókomhoz__ opció be van pipálva.
