@@ -2,7 +2,7 @@
 
 ### Tartalomjegyzék:
 - [Changelog](https://github.com/daunera/Scout-Signature/blob/master/README.md#changelog--v%C3%A1ltoz%C3%A1sok)
-- [Pár példa koncepció](https://github.com/daunera/Scout-Signature/blob/master/README.md#p%C3%A1r-p%C3%A9lda)
+- [Koncepció képek](https://github.com/daunera/Scout-Signature/blob/master/README.md#koncepci%C3%B3-k%C3%A9pek)
 - [Felületi elemek leírása](https://github.com/daunera/Scout-Signature/blob/master/README.md#fel%C3%BClet-elemei)
 - [Telepítés és használat](https://github.com/daunera/Scout-Signature/blob/master/README.md#telep%C3%ADt%C3%A9s-%C3%A9s-haszn%C3%A1latba-v%C3%A9tel)
 
@@ -17,13 +17,13 @@ Ezen felül megvan a lehetőséged, hogy a szokásos szövetségi opciók (logó
 __0.1 (2017.12.29)__
 - Első verzió
 
-## Pár példa
+## Koncepció képek
 
-![](https://github.com/daunera/Scout-Signature/blob/master/pics/sign01.PNG)
-![](https://github.com/daunera/Scout-Signature/blob/master/pics/sign06.PNG)
-![](https://github.com/daunera/Scout-Signature/blob/master/pics/sign10.PNG)
+![](https://github.com/daunera/Scout-Signature/blob/master/concept_art/sign01.PNG)
+![](https://github.com/daunera/Scout-Signature/blob/master/concept_art/sign06.PNG)
+![](https://github.com/daunera/Scout-Signature/blob/master/concept_art/sign10.PNG)
 
-__[MÉG TÖBB KONCEPCIÓ ITT](https://photos.app.goo.gl/nKFlu7gx5Hiv5Vc23)__
+__[MÉG TÖBB ITT](https://photos.app.goo.gl/nKFlu7gx5Hiv5Vc23)__
 
 ## Felület elemei
 
