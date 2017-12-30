@@ -8,9 +8,9 @@
 
 Deployment/Telepítés ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67w9D1JD5VO__
 
-Ennek az add-on-nak a segítségével a Gmail webes és mobilos felületéről könnyen beilleszthetsz egy-egy levélbe a cserkész email aláírásodat. Így nem kell állandóra beállítani vagy ha csak alkalomról  alkalomra használod, nem kell ECSET-ből kimásolnod. Akkor is hasznos lehet, ha egyszerre több megbizatás kapcsán használnz ilyen aláírást, könnyen generálhatsz ilyet is-olyat is.
+Ennek az add-on-nak a segítségével a Gmail webes és mobilos felületéről könnyen beillesztheted egy-egy levélbe a cserkész email aláírásodat. Így nem kell állandóra beállítani vagy ha csak alkalomról alkalomra használod, nem kell ECSET-ből kimásolnod. Akkor is hasznos lehet, ha egyszerre több megbizatás kapcsán használsz ilyen aláírást, könnyen generálhatsz ilyet is-olyat is.
 
-Ezen felül megvan a lehetőség, hogy a szokásos szövetségi opciók (logó, link, színek) mellett sajátot készíts, saját egységed, csapatod számára.
+Ezen felül megvan a lehetőséged, hogy a szokásos szövetségi opciók (logó, link, színek) mellett sajátot készíts, saját egységed, csapatod számára.
 
 ## Changelog / Változások
 
@@ -29,7 +29,7 @@ __[MÉG TÖBB KONCEPCIÓ ITT](https://photos.app.goo.gl/nKFlu7gx5Hiv5Vc23)__
 
 - __Név__: Kötelező kitölteni, teljes név
 - __Email__: Kötelező kitölteni, érvényes email címnek kell lennie, történik ellenőrzés, ajánlatként a saját email cím mindig megjelenik
-Telefonszám
+- __Telefonszám__
 
 
 __Cserkészadatok__
@@ -41,7 +41,7 @@ __Cserkészadatok__
 
 
 __Kinézet__
-- __Szín__: Ajánlatként az ECSET-ben is megtalálható színek szövegesen is kiválaszthatóak. Ezen felül hexadecimális színkódok használhatóak, ezek formátumát ellenőrzi az alkalmazás
+- __Szín__: Ajánlatként az ECSET-ben is megtalálható színek szövegesen is kiválaszthatóak. Ezen felül hexadecimális színkódok használhatóak, ezek formátumát ellenőrzi az alkalmazás. Üresen hagyva Trendizöld az alapértelmezett.
 - __Logó URL__: Saját logó statikusan elérhető url címét add meg. A logó négyzetes legyen, körülbelül 70-150px nagyságú. Ha üresen hagyod, a szövetségi logó kerül ide. Extra opció: Az url előtt egy számot adsz meg, azt a méretet veszi fel a logó. (pl: _100 valalmi-webcim-hu/logo.jpg_) Az alapérték 70.
 - __Logó alatti szöveg__: A logó alá kerülő szöveg adható meg, általában a logóval összhangban lévő név, egység neve. Üresen hagyva _cserkesz.hu_ kerül ide. Extra opció: Ha több sorba szeretnéd törni a neved a _ karakterrel sor törés érhető el (pl: Okosabb_cserkészek)
 - __Logó alatti szöveg linkje__: A logó alatti szöveg egyben egy hivatkozás. Itt megadhatod az egységed webes elérhetőségét, honlap vagy fb oldalét. Üresen hagyva a cserkesz.hu-ra mutat.
@@ -74,10 +74,10 @@ Webes felületen a levelek melleti jobb oldali sávon, mobilon pedig a levél al
 ### Telepítést követő első használatkor
 [Eredeti angol nyelvű leírás](https://developers.google.com/gmail/add-ons/how-tos/authorizing)
 
-Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasználóhoz kötve.
+Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi rosszaság nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasználóhoz kötve.
 
 Azért leírom melyik engedély mire kell:
-- _Futtatás Gmail-bővítményként_: Minden Gmail bövítménynél kötelező hozzáférést kérni, elérhetővá teszi az email címed lekérését is a bővítmény számára
+- _Futtatás Gmail-bővítményként_: Minden Gmail bövítménynél kötelező hozzáférést kérni, elérhetővé teszi az email címed lekérését is a bővítmény számára
 - _Email-üzenetek megtekintése_: A megnyitott üzenet azonosítójának lekérésére kell, hogy lehessen válaszlevelet létrehozni.
 - _Piszkozatok kezelése és e-mailek küldése_: Piszkozatok létrehozására kell
-- _Az alkalmazáshoz társított adatok megtekintése és kezelése_: Ez engedéllyel lehet csak eltárolni a kitöltéseket, csak az alkalmazás érheti el, más senki.
+- _Az alkalmazáshoz társított adatok megtekintése és kezelése_: Ez engedéllyel lehet csak eltárolni a kitöltéseket, csak az alkalmazás érheti el, senki más.
