@@ -12,8 +12,8 @@ Ezen felül megvan a lehetőséged, hogy a szokásos szövetségi opciók (logó
 
 ## Changelog / Változások
 
-__0.1 (2017.12.29)__
-- Első verzió
+__Version 3 (2017.12.29)__
+- Első kiadott verzió
 
 ## Koncepció képek
 
@@ -56,6 +56,7 @@ Ezen felül az jobb felső sarokban lévő almenüből
 
 ## Telepítés és használatba vétel
 [Eredeti angol nyelvű leírás telepítéshez](https://developers.google.com/gmail/add-ons/how-tos/install-unpublished)
+
 Egyenlőre semmilyen Gmail Add-on-t nem lehet publikálni, mert az egész add-on rendszer friss dolog. Csak fejlesztői bővítményként lehet telepíteni @gmail.com-os accountról.
 
 
@@ -71,7 +72,7 @@ Ezután bármelyik üzenetre kattintva elérhető a bővítmény ezen ikonra kat
 
 ![](https://www.gstatic.com/images/icons/material/system/2x/gesture_black_24dp.png)
 
-Webes felületen a levelek melleti jobb oldali sávon, mobilon pedig a levél alatti legalsó sávban.
+Webes felületen egy megnyitott levél melleti jobb oldali sávon, mobilon pedig a levél alatti legalsó sávban.
 
 ### Telepítést követő első használatkor
 [Eredeti angol nyelvű leírás](https://developers.google.com/gmail/add-ons/how-tos/authorizing)
