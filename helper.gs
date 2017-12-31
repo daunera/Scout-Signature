@@ -1,6 +1,5 @@
 function suggestMail() {  
-  var email = Session.getActiveUser().getEmail();
-  return CardService.newSuggestions().addSuggestion(email);
+  return Session.getActiveUser().getEmail();
 }
 
 function sendFeedback(e){
