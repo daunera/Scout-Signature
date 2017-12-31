@@ -12,7 +12,7 @@ Ezen felül megvan a lehetőséged, hogy a szokásos szövetségi opciók (logó
 
 ## Changelog / Változások
 
-__Version 3 (2017.12.29)__
+__Verzió: 1 (2017.12.29)__
 - Első kiadott verzió
 
 ## Koncepció képek
@@ -26,7 +26,7 @@ __[MÉG TÖBB ITT](https://photos.app.goo.gl/nKFlu7gx5Hiv5Vc23)__
 ## Felület elemei
 
 - __Név__: Kötelező kitölteni, teljes név
-- __Email__: Kötelező kitölteni, érvényes email címnek kell lennie, történik ellenőrzés, ajánlatként a saját email cím mindig megjelenik
+- __Email__: Kötelező kitölteni, érvényes email címnek kell lennie, történik ellenőrzés, ~~ajánlatként a saját email cím mindig megjelenik~~ _egyenlőre nem elérhető ez a funkció_
 - __Telefonszám__
 
 
@@ -68,19 +68,19 @@ Deployment/Telepítés ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67
 3. Másold be a bővítmény telepítési ID-ját (deployment ID fentebb) a __Fejlesztő bővítmények__ szövegdobozra, majd kattins a __Telepítés__-re
 4. Pipáld és fogadd el a felugró ablakot.
 
-Ezután bármelyik üzenetre kattintva elérhető a bővítmény ezen ikonra kattintva: 
+Ezután bármelyik üzenetet megnyitva elérhető a bővítmény webes felületen a levél mellett jobb oldali sávon, mobilon a levél alatti legalsó sávban ezen ikonra kattintva: 
 
 ![](https://www.gstatic.com/images/icons/material/system/2x/gesture_black_24dp.png)
 
-Webes felületen egy megnyitott levél melleti jobb oldali sávon, mobilon pedig a levél alatti legalsó sávban.
+Bemutató képek: TBD
 
 ### Telepítést követő első használatkor
 [Eredeti angol nyelvű leírás](https://developers.google.com/gmail/add-ons/how-tos/authorizing)
 
-Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi rosszaság nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasználóhoz kötve.
+Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi rosszaság nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasználóhoz kötve. Érdemes tudni, hogy minden hozzáférés csak ideiglenesen adódik át az adott munkamenetre, így mindig történik authorizáció felhasználó részről.
 
 Azért leírom melyik engedély mire kell:
-- _Futtatás Gmail-bővítményként_: Minden Gmail bövítménynél kötelező hozzáférést kérni, elérhetővé teszi az email címed lekérését is a bővítmény számára
+- _Futtatás Gmail-bővítményként_: Minden Gmail bövítménynél kötelező ezt a hozzáférést kérni
 - _Email-üzenetek megtekintése_: A megnyitott üzenet azonosítójának lekérésére kell, hogy lehessen válaszlevelet létrehozni.
 - _Piszkozatok kezelése és e-mailek küldése_: Piszkozatok létrehozására kell
 - _Az alkalmazáshoz társított adatok megtekintése és kezelése_: Ez engedéllyel lehet csak eltárolni a kitöltéseket, csak az alkalmazás érheti el, senki más.
