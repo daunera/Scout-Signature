@@ -4,6 +4,7 @@
 - [Koncepció képek](https://github.com/daunera/Scout-Signature/blob/master/README.md#koncepci%C3%B3-k%C3%A9pek)
 - [Felületi elemek leírása](https://github.com/daunera/Scout-Signature/blob/master/README.md#fel%C3%BClet-elemei)
 - [Telepítés és használat](https://github.com/daunera/Scout-Signature/blob/master/README.md#telep%C3%ADt%C3%A9s-%C3%A9s-haszn%C3%A1latba-v%C3%A9tel)
+- [Képernyőképek a bővítményről](https://github.com/daunera/Scout-Signature/blob/master/README.md#k%C3%A9perny%C5%91k%C3%A9pek-a-b%C5%91v%C3%ADtm%C3%A9nyr%C5%91l)
 
 Ennek az add-on-nak a segítségével a Gmail webes és mobilos felületéről könnyen beillesztheted egy-egy levélbe a cserkész email aláírásodat. Így nem kell állandóra beállítani vagy ha csak alkalomról alkalomra használod, nem kell ECSET-ből kimásolnod. Akkor is hasznos lehet, ha egyszerre több megbizatás kapcsán használsz ilyen aláírást, könnyen generálhatsz ilyet is-olyat is.
 
@@ -20,7 +21,7 @@ __[MÉG TÖBB ITT](https://photos.app.goo.gl/nKFlu7gx5Hiv5Vc23)__
 ## Felület elemei
 
 - __Név__: Kötelező kitölteni, teljes név
-- __Email__: Kötelező kitölteni, érvényes email címnek kell lennie, történik ellenőrzés, ~~ajánlatként a saját email cím mindig megjelenik~~ _egyenlőre nem elérhető ez a funkció_
+- __Email__: Kötelező kitölteni, érvényes email címnek kell lennie, történik ellenőrzés
 - __Telefonszám__
 
 
@@ -66,8 +67,6 @@ Ezután bármelyik üzenetet megnyitva elérhető a bővítmény webes felülete
 
 ![](https://www.gstatic.com/images/icons/material/system/2x/gesture_black_24dp.png)
 
-Bemutató képek: TBD
-
 ### Telepítést követő első használatkor
 [Eredeti angol nyelvű leírás](https://developers.google.com/gmail/add-ons/how-tos/authorizing)
 
@@ -78,3 +77,14 @@ Azért leírom melyik engedély mire kell:
 - _Email-üzenetek megtekintése_: A megnyitott üzenet azonosítójának lekérésére kell, hogy lehessen válaszlevelet létrehozni.
 - _Piszkozatok kezelése és e-mailek küldése_: Piszkozatok létrehozására kell
 - _Az alkalmazáshoz társított adatok megtekintése és kezelése_: Ez engedéllyel lehet csak eltárolni a kitöltéseket, csak az alkalmazás érheti el, senki más.
+
+## Képernyőképek a bővítményről
+
+### Android
+
+![](https://github.com/daunera/Scout-Signature/blob/master/screens/android1.png)  ![](https://github.com/daunera/Scout-Signature/blob/master/screens/android2.png)  ![](https://github.com/daunera/Scout-Signature/blob/master/screens/android3.png)
+
+### Web
+
+![](https://github.com/daunera/Scout-Signature/blob/master/screens/web1.png)
+![](https://github.com/daunera/Scout-Signature/blob/master/screens/web2.png)
