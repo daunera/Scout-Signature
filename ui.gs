@@ -32,7 +32,7 @@ function buildEditSection(){
   section
     .addWidget(CardService.newTextParagraph().setText('<font color="#ff0000">*kötelező</font>'))
     .addWidget(buildTextInput('name','Név*'))
-    .addWidget(buildTextInput('mail','Email*').setSuggestions(suggestMail()))
+    .addWidget(buildTextInput('mail','Email*','suggestMail'))
     .addWidget(buildTextInput('phone','Telefonszám'));
     
   section
@@ -89,13 +89,19 @@ function buildEndSection(status){
 }
 
 
-function buildTextInput(fieldName, title){
+function buildTextInput(fieldName, title, option){
 
   var textInput = CardService.newTextInput()
     .setFieldName(fieldName)
     .setTitle(title)
     .setOnChangeAction(CardService.newAction().setFunctionName('saveAction'))
     .setValue(getValue(fieldName));
+    
+  if(option=='suggestMail'){
+    var email = suggestMail();
+    if (email != '')
+      textInput.setSuggestions(CardService.newSuggestions().addSuggestion(email));
+  }
   
   return textInput;
 }

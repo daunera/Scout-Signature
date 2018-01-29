@@ -1,21 +1,13 @@
-# Aláírás generáló Gmail Bővítmény ![](https://www.gstatic.com/images/icons/material/system/2x/gesture_black_24dp.png)
+# MCSSZ Aláírás generáló Gmail Bővítmény
 
 ### Tartalomjegyzék:
-- [Changelog](https://github.com/daunera/Scout-Signature/blob/master/README.md#changelog--v%C3%A1ltoz%C3%A1sok)
 - [Koncepció képek](https://github.com/daunera/Scout-Signature/blob/master/README.md#koncepci%C3%B3-k%C3%A9pek)
 - [Felületi elemek leírása](https://github.com/daunera/Scout-Signature/blob/master/README.md#fel%C3%BClet-elemei)
 - [Telepítés és használat](https://github.com/daunera/Scout-Signature/blob/master/README.md#telep%C3%ADt%C3%A9s-%C3%A9s-haszn%C3%A1latba-v%C3%A9tel)
 
-Deployment/Telepítés ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67w9D1JD5VO__
-
 Ennek az add-on-nak a segítségével a Gmail webes és mobilos felületéről könnyen beillesztheted egy-egy levélbe a cserkész email aláírásodat. Így nem kell állandóra beállítani vagy ha csak alkalomról alkalomra használod, nem kell ECSET-ből kimásolnod. Akkor is hasznos lehet, ha egyszerre több megbizatás kapcsán használsz ilyen aláírást, könnyen generálhatsz ilyet is-olyat is.
 
 Ezen felül megvan a lehetőséged, hogy a szokásos szövetségi opciók (logó, link, színek) mellett sajátot készíts, saját egységed, csapatod számára.
-
-## Changelog / Változások
-
-__0.1 (2017.12.29)__
-- Első verzió
 
 ## Koncepció képek
 
@@ -28,7 +20,7 @@ __[MÉG TÖBB ITT](https://photos.app.goo.gl/nKFlu7gx5Hiv5Vc23)__
 ## Felület elemei
 
 - __Név__: Kötelező kitölteni, teljes név
-- __Email__: Kötelező kitölteni, érvényes email címnek kell lennie, történik ellenőrzés, ajánlatként a saját email cím mindig megjelenik
+- __Email__: Kötelező kitölteni, érvényes email címnek kell lennie, történik ellenőrzés, ~~ajánlatként a saját email cím mindig megjelenik~~ _egyenlőre nem elérhető ez a funkció_
 - __Telefonszám__
 
 
@@ -58,26 +50,31 @@ Ezen felül az jobb felső sarokban lévő almenüből
 
 ## Telepítés és használatba vétel
 [Eredeti angol nyelvű leírás telepítéshez](https://developers.google.com/gmail/add-ons/how-tos/install-unpublished)
+
 Egyenlőre semmilyen Gmail Add-on-t nem lehet publikálni, mert az egész add-on rendszer friss dolog. Csak fejlesztői bővítményként lehet telepíteni @gmail.com-os accountról.
+
+
+Deployment/Telepítés ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67w9D1JD5VO__
+
 
 1. [Nyisd meg a Gmail Add-on/Bővítmények beállítás fülét](https://mail.google.com/mail/#settings/addons)
 2. A Bővítmények fülön ellenőrizd, hogy a __Fejlesztői bővítmények bekapcsolása a fiókomhoz__ opció be van pipálva.
 3. Másold be a bővítmény telepítési ID-ját (deployment ID fentebb) a __Fejlesztő bővítmények__ szövegdobozra, majd kattins a __Telepítés__-re
 4. Pipáld és fogadd el a felugró ablakot.
 
-Ezután bármelyik üzenetre kattintva elérhető a bővítmény ezen ikonra kattintva: 
+Ezután bármelyik üzenetet megnyitva elérhető a bővítmény webes felületen a levél mellett jobb oldali sávon, mobilon a levél alatti legalsó sávban ezen ikonra kattintva: 
 
 ![](https://www.gstatic.com/images/icons/material/system/2x/gesture_black_24dp.png)
 
-Webes felületen a levelek melleti jobb oldali sávon, mobilon pedig a levél alatti legalsó sávban.
+Bemutató képek: TBD
 
 ### Telepítést követő első használatkor
 [Eredeti angol nyelvű leírás](https://developers.google.com/gmail/add-ons/how-tos/authorizing)
 
-Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi rosszaság nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasználóhoz kötve.
+Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi rosszaság nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasználóhoz kötve. Érdemes tudni, hogy minden hozzáférés csak ideiglenesen adódik át az adott munkamenetre, így mindig történik authorizáció felhasználó részről.
 
 Azért leírom melyik engedély mire kell:
-- _Futtatás Gmail-bővítményként_: Minden Gmail bövítménynél kötelező hozzáférést kérni, elérhetővé teszi az email címed lekérését is a bővítmény számára
+- _Futtatás Gmail-bővítményként_: Minden Gmail bövítménynél kötelező ezt a hozzáférést kérni
 - _Email-üzenetek megtekintése_: A megnyitott üzenet azonosítójának lekérésére kell, hogy lehessen válaszlevelet létrehozni.
 - _Piszkozatok kezelése és e-mailek küldése_: Piszkozatok létrehozására kell
 - _Az alkalmazáshoz társított adatok megtekintése és kezelése_: Ez engedéllyel lehet csak eltárolni a kitöltéseket, csak az alkalmazás érheti el, senki más.
