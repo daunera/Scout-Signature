@@ -54,6 +54,8 @@ Ezen felül az jobb felső sarokban lévő almenüből
 
 Egyenlőre semmilyen Gmail Add-on-t nem lehet publikálni, mert az egész add-on rendszer friss dolog. Csak fejlesztői bővítményként lehet telepíteni @gmail.com-os accountról.
 
+__*UPDATE:__ @cserkesz.hu-s címről úgy küldhető ilyen aláírás, hogy egy másik @gmail.com-is címhez hozzákötöd a cserkesz.hu-s címet, hogy annak nevében is tudj emial küldeni. Ezt a _Beállítások > Fiókok és importálás > E-mail küldése erről a címről: "Újabb e-mail-cím hozzáadása"_-nál tudod beállítani.
+
 
 Deployment/Telepítés ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67w9D1JD5VO__
 
