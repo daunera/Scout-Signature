@@ -66,7 +66,7 @@ Ezen felül az jobb felső sarokban lévő almenüből
 Egyenlőre semmilyen Gmail Add-on-t nem lehet publikálni, mert az egész add-on rendszer friss dolog. Csak fejlesztői bővítményként lehet telepíteni @gmail.com-os accountról. Cserkesz.hu-s címről úgy küldhető ilyen aláírás, hogy egy másik @gmail.com-is címhez hozzákötöd a cserkesz.hu-s címet, hogy annak nevében is tudj emial küldeni. Ezt a _Beállítások > Fiókok és importálás > E-mail küldése erről a címről: "Újabb e-mail-cím hozzáadása"_-nál tudod beállítani.
 
 
-Deployment/Telepítés ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67w9D1JD5VO__
+Deployment/Telepítés ID: __AKfycbwLeyyMPZIMZQF_oV8iQb1AzcIU7rkkwPELEAX0Gj43QCRtl7eQMVGzfqZmHgULKDqm__
 
 
 1. [Nyisd meg a Gmail Add-on/Bővítmények beállítás fülét](https://mail.google.com/mail/#settings/addons)
@@ -74,22 +74,21 @@ Deployment/Telepítés ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67
 3. Másold be a bővítmény telepítési ID-ját (deployment ID fentebb) a __Fejlesztő bővítmények__ szövegdobozra, majd kattins a __Telepítés__-re
 4. Pipáld és fogadd el a felugró ablakot.
 
-Ezután piszkozatot létrehozva
-- web esetén a küldés gomb sávjában jobb oldalt az általános gombok után az alábbi ikonra kattintva, 
+Ezután piszkozatot létrehozva:
+- web esetén a küldés gomb sávjában jobb oldalt az általános gombok után a <img src="http://varosmajor.cserkesz.hu/mcsszsign/icon.png" width="20"> ikonra kattintva, 
 - mobil esetén a jobb felső sarokban lévő _hárompontos_ menü legalján __MCSSZ aláírás__ menüpontból
-érhető el a bővítmény.
 
-![](http://varosmajor.cserkesz.hu/mcsszsign/icon.png)
+érhető el a bővítmény.
 
 ### Telepítést követő első használatkor
 [Eredeti angol nyelvű leírás](https://developers.google.com/gmail/add-ons/how-tos/authorizing)
 
-Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi rosszaság nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasználóhoz kötve. Érdemes tudni, hogy minden hozzáférés csak ideiglenesen adódik át az adott munkamenetre, így mindig történik authorizáció felhasználó részről.
+Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi rosszaság nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasználóhoz kötve. A hozzáférés megadáshoz először ki kell választani a kívánt felhasználót, majd a _Az alkalmazás nincs ellenőrizve_ ablaknál bal oldalt a _Speciális_ gombra kattintani, ahonnan a lenyílő rész alján a _Lépjen ide:..._ linket kell választani. Itt kell az _Engedélyezés_ gombra kattintani 
 
 Azért leírom melyik engedély mire kell:
 - _Futtatás Gmail-bővítményként_: Minden Gmail bövítménynél kötelező ezt a hozzáférést megadni
 - _Piszkozatok kezelése és e-mailek küldése_: Piszkozatokba való szövegbeillesztéshez szükséges
-- _Emailek metaadatainak megtekintése_: Piszkozatokba való szövegbeillesztéshez szükséges
+- _Megtekintheti az e-mail-üzenetek metaadatait_: Piszkozatokba való szövegbeillesztéshez szükséges
 - _Az alkalmazáshoz társított adatok megtekintése és kezelése_: Ez engedéllyel lehet csak eltárolni a beírt adatokat, csak az alkalmazás érheti el, senki más.
 
 ## Képernyőképek a bővítményről
