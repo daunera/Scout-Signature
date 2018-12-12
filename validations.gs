@@ -1,11 +1,15 @@
 function validation(res){
-  if (!checkRequired(res))
-    return 'Kötelező mező üres!';
-  if (!checkEmail(res['mail']))
-    return 'Hibás email formátum!';
-  if (!checkColor(res['color']))
-    return 'Hibás színkód formátum!';
-  return 'Ok';
+  var req = checkRequired(res);
+  if (req !== 'Ok')
+    return req;
+  else if (!checkEmail(res.mail))
+    return 'Helytelen az email formátuma!';
+  else if (!checkColor(res.color))
+    return 'Helytelen a színkód formátuma!';
+  else if (!checkNum(res.logoSize))
+    return 'A logó mérete csak szám lehet!';
+  else
+    return 'Ok';
 }
 
 function checkColor(color) {
@@ -20,7 +24,17 @@ function checkEmail(email){
 }
 
 function checkRequired(res){
-  if (res['mail'] == undefined || res['name'] == undefined)
-    return false;
-  return true;
+  if (!res.mail && !res.name)
+    return 'Üres a név és az email mező!';
+  else if (!res.mail)
+    return 'Üres az email mező!';
+  else if (!res.name)
+    return 'Üres a név mező!';
+  else
+    return 'Ok';
+}
+
+function checkNum(number){
+  var regExpPattern = /^[0-9]*$/;
+  return regExpPattern.test(number);
 }

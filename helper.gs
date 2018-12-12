@@ -1,62 +1,35 @@
-function suggestMail() {  
-  return Session.getActiveUser().getEmail();
-}
-
-function sendFeedback(e){
-  var accessToken = e.messageMetadata.accessToken;
-  GmailApp.setCurrentMessageAccessToken(accessToken);
-  
-  var draft = GmailApp.createDraft('daunera@gmail.com','[ScoutSignature] visszajelzés','');
-  return CardService.newComposeActionResponseBuilder().setGmailDraft(draft).build();
-}
-
-function compose(e){
-  var accessToken = e.messageMetadata.accessToken;
-  GmailApp.setCurrentMessageAccessToken(accessToken);
-  
-  var res = e['formInput'];  
+function update(e){
+  var res = e.formInput;  
   var check = validation(res);
   
-  var draft;
-  if(check == 'Ok'){
-    var htmlBody = 'Szöveg helye<br><br>'+createSignature(res);
-    if(e['parameters']['reply'] == 'yes'){
-      var messageId = e.messageMetadata.messageId;
-      var message = GmailApp.getMessageById(messageId);
-      draft = message.createDraftReply('',{htmlBody: htmlBody});
-    }
-    else
-      draft = GmailApp.createDraft('', '', '', {htmlBody: htmlBody});
-    return CardService.newComposeActionResponseBuilder().setGmailDraft(draft).build();
+  if(check === 'Ok'){
+    check = '';
+    var htmlContent = 'Szöveg helye<br><br>'+createSignature(res); 
+    var response = CardService.newUpdateDraftActionResponseBuilder()
+    .setUpdateDraftBodyAction(CardService.newUpdateDraftBodyAction()
+                              .addUpdateContent(
+                                htmlContent,
+                                CardService.ContentType.MUTABLE_HTML)
+                              .setUpdateType(
+                                CardService.UpdateDraftBodyType.IN_PLACE_INSERT))
+    .build();
+    return response;
   }
-  else
-    Logger.log('ERROR: '+check);
-    return null;
-}
-
-function validateAction(e){
-  //var accessToken = e.messageMetadata.accessToken;
-  //GmailApp.setCurrentMessageAccessToken(accessToken);
-  
-  var res = e['formInput'];
-  
-  var check = validation(res);
-  
-  if(check == 'Ok')
-    check = '<font color="#00ff00">'+check+'</font>'
-  else
-    check = '<font color="#ff0000">'+check+'</font>'
-  
-  return buildUI(check);
+  else{
+    return buildUI(check, e.clientPlatform);
+  }
 }
 
 function saveAction(e){
-  var res = e['formInput'];
+  var res = e.formInput;
+  var properties = PropertiesService.getUserProperties();
+  properties.setProperties(res, true);
+}
+
+function deleteAction(e){
   var properties = PropertiesService.getUserProperties();
   properties.deleteAllProperties();
-  if('save' in res){
-    properties.setProperties(res, true);
-  }
+  return buildUI('', e.clientPlatform);
 }
 
 function getValue(property, option){
@@ -68,10 +41,10 @@ function getValue(property, option){
   }
   if(property == 'level'){
     if(option == propertyValue || (propertyValue == null && option == ''))
-      return true;
+    return true;
     return false;
   }
   if(propertyValue == undefined)
-      return '';
+    return '';
   return propertyValue;
 }

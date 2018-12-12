@@ -1,106 +1,93 @@
-var SECONDARY_COLOR = '#0075bf';
-var COLORS = ['Trendizöld','WOSM-lila','Narancssárga','Világoskék','Piros','Gesztenyebarna','Türkizkék','#48B84F'];
+var SECONDARY_COLOR = '#ffa500';
+var COLORS = ['Trendizöld','WOSM-lila','Narancssárga','Világoskék','Piros','Gesztenyebarna','Türkizkék','Városmajor zöld'];
 
-function buildAddOn(e) {
-  return [buildUI('')];
+function buildAddOn(e){
+  return [buildUI('', e.clientPlatform)];
 }
 
-function buildUI(status) {
+function buildUI(status, platform) {
   var card = CardService.newCardBuilder();
   
   card.addCardAction(CardService.newCardAction()
-    .setText('Segítség')
-    .setOpenLink(CardService.newOpenLink().setUrl('https://github.com/daunera/Scout-Signature/blob/master/README.md')));
-    
+                     .setText('Segítség')
+                     .setOpenLink(CardService.newOpenLink().setUrl('https://github.com/daunera/Scout-Signature/blob/master/README.md')));
+  
   card.addCardAction(CardService.newCardAction()
-    .setText('Visszajelzés')
-    .setComposeAction(CardService.newAction().setFunctionName('sendFeedback'), CardService.ComposedEmailType.STANDALONE_DRAFT))
+                     .setText('Törlöm a tárolt adataim')
+                     .setOnClickAction(CardService.newAction().setFunctionName('deleteAction')));
   
   card.setHeader(CardService.newCardHeader()
-    .setTitle('Hozz létre saját aláírást!')
-    .setImageUrl('https://ecset-static.cserkesz.net/static/alairas/mcssz_alairas.png'));
+                 .setTitle('Hozz létre saját aláírást!')
+                 .setImageUrl('http://varosmajor.cserkesz.hu/mcsszsign/mcssz_alairas.png'));
   
-  card.addSection(buildEditSection());
-  card.addSection(buildEndSection(status));
+  card.addSection(buildEditSection(status, platform));
   
   return card.build();
 }
 
-function buildEditSection(){
+function buildEditSection(status, platform){
   var section = CardService.newCardSection();
   
-  section
-    .addWidget(CardService.newTextParagraph().setText('<font color="#ff0000">*kötelező</font>'))
-    .addWidget(buildTextInput('name','Név*'))
-    .addWidget(buildTextInput('mail','Email*','suggestMail'))
-    .addWidget(buildTextInput('phone','Telefonszám'));
-    
-  section
-    .addWidget(CardService.newTextParagraph().setText('<b><font color="'+SECONDARY_COLOR+'">Cserkészadatok</font></b>'))
-    .addWidget(buildTextInput('teamNum','Csapatszám'))
-    .addWidget(CardService.newSelectionInput()
-      .setFieldName('level')
-      .setTitle('Képesítés')
-      .setType(CardService.SelectionInputType.DROPDOWN)
-      .setOnChangeAction(CardService.newAction().setFunctionName('saveAction'))
-      .addItem('-', '', getValue('level',''))
-      .addItem('őrsvezető', 'őv.', getValue('level','őv.'))
-      .addItem('segédtiszt', 'csst.', getValue('level','csst.'))
-      .addItem('cserkésztiszt', 'cst.', getValue('level','cst.')))
-    .addWidget(buildTextInput('rank','Megbizatás'))
-    .addWidget(buildTextInput('rankTeam','Megbizatás egysége'))
-    .addWidget(buildTextInput('address','Cím'));
-    
-  section
-    .addWidget(CardService.newTextParagraph().setText('<b><font color="'+SECONDARY_COLOR+'">Kinézet</font></b>'))
-    .addWidget(buildTextInput('color','Szín')
-      .setSuggestions(CardService.newSuggestions()
-        .addSuggestions(COLORS)))
-    .addWidget(buildTextInput('logoUrl','Logó URL'))
-    .addWidget(buildTextInput('title','Logó alatti szöveg'))
-    .addWidget(buildTextInput('titleUrl','Logó alatti szöveg linkje'))
-  
-  return section;
-}
-
-function buildEndSection(status){
-  var section = CardService.newCardSection();
+  Logger.log(platform);
+  if(platform === 'android' || platform === 'ios'){
+    section.addWidget(CardService.newTextParagraph().setText('<font color="#ff0000">'+status+'</font>'));
+  }
   
   section
+  .addWidget(buildTextInput('name','Név (kötelező)'))
+  .addWidget(buildTextInput('mail','Email (kötelező)'))
+  .addWidget(buildTextInput('phone','Telefonszám'));
+  
+  section
+  .addWidget(CardService.newTextParagraph().setText('<b><font color="'+SECONDARY_COLOR+'">Cserkészadatok</font></b>'))
+  .addWidget(buildTextInput('teamNum','Csapatszám', 'Pont nélkül a végén'))
   .addWidget(CardService.newSelectionInput()
-    .setFieldName('save')
-    .setType(CardService.SelectionInputType.CHECK_BOX)
-    .setOnChangeAction(CardService.newAction().setFunctionName('saveAction'))
-    .addItem('Beállítások megjegyzése', 'saveIt', getValue('save')));
+             .setFieldName('level')
+             .setTitle('Képesítés')
+             .setType(CardService.SelectionInputType.DROPDOWN)
+             .setOnChangeAction(CardService.newAction().setFunctionName('saveAction'))
+             .addItem('-', '', getValue('level',''))
+             .addItem('őrsvezető', 'őv.', getValue('level','őv.'))
+             .addItem('segédtiszt', 'csst.', getValue('level','csst.'))
+             .addItem('cserkésztiszt', 'cst.', getValue('level','cst.')))
+  .addWidget(buildTextInput('rank','Megbizatás'))
+  .addWidget(buildTextInput('rankTeam','Megbizatás egysége'))
+  .addWidget(buildTextInput('outerTeam','Nagyobb egység', 'Üresen hagyva: Magyar Cserkészszövetség'))
+  .addWidget(buildTextInput('address','Cím', 'Üresen hagyva: szövetségi iroda címe'));
   
-  var composeAction = CardService.newAction().setFunctionName('compose');
-  section 
+  section
+  .addWidget(CardService.newTextParagraph().setText('<b><font color="'+SECONDARY_COLOR+'">Kinézet</font></b>'))
+  .addWidget(buildTextInput('color','Szín','Üresen hagyva Trendizöld, hexa színkód is használható: color-hex.com')
+             .setSuggestions(CardService.newSuggestions()
+                             .addSuggestions(COLORS)))
+  .addWidget(buildTextInput('logoUrl','Logó URL','Üresen hagyva: MCSSZ logó'))
+  .addWidget(buildTextInput('logoSize','Logó mérete','Pixelben, üresen hagyva: 70 px'))
+  .addWidget(buildTextInput('title','Logó alatti szöveg','Több sor esetén: elsősor_másodiksor, üresen hagyva: cserkesz.hu'))
+  .addWidget(buildTextInput('titleUrl','Logó alatti szöveg linkje', 'Üresen hagyva: cserkesz.hu'))
+  
+  if(platform === 'web' || !platform){
+    section.addWidget(CardService.newTextParagraph().setText('<font color="#ff0000">'+status+'</font>'));
+  }
+  
+  section
   .addWidget(CardService.newButtonSet()
-    .addButton(CardService.newTextButton()
-      .setText('Új email')
-      .setComposeAction(composeAction.setParameters({reply: 'no'}), CardService.ComposedEmailType.STANDALONE_DRAFT))
-    .addButton(CardService.newTextButton()
-      .setText('Válasz erre')
-      .setComposeAction(composeAction.setParameters({reply: 'yes'}), CardService.ComposedEmailType.REPLY_AS_DRAFT)));
-      
-  //section.addWidget(CardService.newTextParagraph().setText(status));
-      
+             .addButton(CardService.newTextButton()
+                        .setText('Aláírás beszúrása')
+                        .setOnClickAction(CardService.newAction().setFunctionName('update'))))
+  
   return section;
 }
 
-
-function buildTextInput(fieldName, title, option){
-
+function buildTextInput(fieldName, title, hint){
+  
   var textInput = CardService.newTextInput()
-    .setFieldName(fieldName)
-    .setTitle(title)
-    .setOnChangeAction(CardService.newAction().setFunctionName('saveAction'))
-    .setValue(getValue(fieldName));
-    
-  if(option=='suggestMail'){
-    var email = suggestMail();
-    if (email != '')
-      textInput.setSuggestions(CardService.newSuggestions().addSuggestion(email));
+  .setFieldName(fieldName)
+  .setTitle(title)
+  .setOnChangeAction(CardService.newAction().setFunctionName('saveAction'))
+  .setValue(getValue(fieldName));
+  
+  if (hint) {
+    textInput.setHint(hint)
   }
   
   return textInput;
