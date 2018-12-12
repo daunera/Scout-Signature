@@ -1,6 +1,7 @@
 # MCSSZ Aláírás generáló Gmail Bővítmény
 
 ### Tartalomjegyzék:
+- [Frissítés](https://github.com/daunera/Scout-Signature/blob/master/README.md#koncepci%C3%B3-k%C3%A9pek))
 - [Koncepció képek](https://github.com/daunera/Scout-Signature/blob/master/README.md#koncepci%C3%B3-k%C3%A9pek)
 - [Felületi elemek leírása](https://github.com/daunera/Scout-Signature/blob/master/README.md#fel%C3%BClet-elemei)
 - [Telepítés és használat](https://github.com/daunera/Scout-Signature/blob/master/README.md#telep%C3%ADt%C3%A9s-%C3%A9s-haszn%C3%A1latba-v%C3%A9tel)
@@ -9,6 +10,19 @@
 Ennek az add-on-nak a segítségével a Gmail webes és mobilos felületéről könnyen beillesztheted egy-egy levélbe a cserkész email aláírásodat. Így nem kell állandóra beállítani vagy ha csak alkalomról alkalomra használod, nem kell ECSET-ből kimásolnod. Akkor is hasznos lehet, ha egyszerre több megbizatás kapcsán használsz ilyen aláírást, könnyen generálhatsz ilyet is-olyat is.
 
 Ezen felül megvan a lehetőséged, hogy a szokásos szövetségi opciók (logó, link, színek) mellett sajátot készíts, saját egységed, csapatod számára.
+
+## Frissítés (2018.12.12)
+A Gmail Add-on keretrendszer fejlesztéseivel lehetőségem adódott alakítani a programon a használhatóságán.
+- Mostantól a piszkozat létrehozásakkor lehet a szövegtörzsbe beszúrni az aláírást, nem a létrehozáskor
+- Helyességellenőrzés (kötelező mezők megléte, számformátumok, email és hexa formátumok)
+- Helyességellenőrzés kijelzése (piros színnel, weben az alsó gomb felett, mobilon az első sorban)
+- Nagyobb egység megadására is van lehetőség az alsó részen (eddig fixen MCSSZ szerepelt itt)
+- Logó mérete külön beviteli mezőbe került
+- A mezők alá tippek kerlültek (mi kerül a helyére ha üres marad egy mező, egyéb megkötések, tippek stb.)
+- Adatok mentése automatikus, nem lehet kikapcsolni (Törölni a jobb felső sarok menüjéből lehet)
+- Új logója lett, aláírás helyett egy cserkészliliom, utalva a cserkészaláírás voltára
+- Változott a színkészlet
+- A képfájlok közös statikus helyre kerültek
 
 ## Koncepció képek
 
@@ -20,8 +34,8 @@ __[MÉG TÖBB ITT](https://photos.app.goo.gl/nKFlu7gx5Hiv5Vc23)__
 
 ## Felület elemei
 
-- __Név__: Kötelező kitölteni, teljes név
-- __Email__: Kötelező kitölteni, érvényes email címnek kell lennie, történik ellenőrzés
+- __Név__: Kötelező kitölteni, teljes név (kitöltöttségellenőrzés történik)
+- __Email__: Kötelező kitölteni, érvényes email címnek kell lennie (formátum és kitöltöttségellenőrzés történik)
 - __Telefonszám__
 
 
@@ -30,31 +44,28 @@ __Cserkészadatok__
 - __Képesítés__: Legördülő listából kizárólag az alábbiak: - (üresen marad), őrsvezető, segédtiszt, cserkésztiszt
 - __Megbizatás__
 - __Megbizatás egysége__: Teljes névvel (pl: 2. Sík Sándor cserkészcsapat, Szent Katalin raj, Országos Elnökség)
+- __Nagyobb egység__: Ha a megbizatás egysége őrs vagy más kisebb egység, itt meg lehet adni a csapat nevét, üresen hagyva a szövetség neve kerül ide
 - __Cím__: Egységed elérhetősége, üresen hagyva a központi iroda címe kerül ide (Tömörkény utca)
 
 
 __Kinézet__
-- __Szín__: Ajánlatként az ECSET-ben is megtalálható színek szövegesen is kiválaszthatóak. Ezen felül hexadecimális színkódok használhatóak, ezek formátumát ellenőrzi az alkalmazás. Üresen hagyva Trendizöld az alapértelmezett.
-- __Logó URL__: Saját logó statikusan elérhető url címét add meg. A logó négyzetes legyen, körülbelül 70-150px nagyságú. Ha üresen hagyod, a szövetségi logó kerül ide. Extra opció: Az url előtt egy számot adsz meg, azt a méretet veszi fel a logó. (pl: _100 valalmi-webcim-hu/logo.jpg_) Az alapérték 70.
+- __Szín__: Ajánlatként az ECSET-ben is megtalálható színek szövegesen is kiválaszthatóak. Ezen felül hexadecimális színkódok használhatóak, ezek formátumát ellenőrzi az alkalmazás. Üresen hagyva Trendizöld az alapértelmezett. Színkódokhoz egy hasznos oldal: color-hex.cim
+- __Logó URL__: Saját logó statikusan elérhető url címét add meg. A logó négyzetes legyen, körülbelül 70-150px nagyságú. Ha üresen hagyod, a szövetségi logó kerül ide.
+- __Logó mérete__: Az itt megadott méretet veszi fel a logó is, mértékegysége pixel, üresen hagyva az alapértelmezett érték 70 pixel
 - __Logó alatti szöveg__: A logó alá kerülő szöveg adható meg, általában a logóval összhangban lévő név, egység neve. Üresen hagyva _cserkesz.hu_ kerül ide. Extra opció: Ha több sorba szeretnéd törni a neved a _ karakterrel sor törés érhető el (pl: Okosabb_cserkészek)
 - __Logó alatti szöveg linkje__: A logó alatti szöveg egyben egy hivatkozás. Itt megadhatod az egységed webes elérhetőségét, honlap vagy fb oldalét. Üresen hagyva a cserkesz.hu-ra mutat.
 
-__Beállítások megjegyzése__: Ezt bepipálva a kitöltésed eltárolódik, a bővítmény újboli megnyitásakkor továbbra is elérhető. Ha bepipálás után bármelyik mezőt szerkeszted, a módosítás utáni állapot tárolódik el.
-
-Legalul két gomb található:
-- __Új email__: Teljesen új piszkozatot hoz létre. Csak sikeres ellenőrzést követően hozza létre.
-- __Válasz erre__: A megnyitott levélre válaszoló piszkozatot hoz létre aláírással. Csak sikeres ellenőrzést követően hozza létre.
+Legalul a beillesztő gomb található:
+- __Aláírás beszúrása__: Beszúrja oda a piszkozaton belül az aláírást, ahol a kurzor áll. Ha nincs benne a kurzor, akkor legfelülre. Csak sikeres ellenőrzés esetén szúrja be, sikertelenség esetén a hiba okát írja ki. 
 
 Ezen felül az jobb felső sarokban lévő almenüből
-- email-es visszajelzés küldhető javaslatoknak, hibajelentésekhez a fejlesztő felé
 - erre az oldalra mutató segítség érhető el
+- törölni lehet a bővítmény által eltárolt adatokat
 
 ## Telepítés és használatba vétel
 [Eredeti angol nyelvű leírás telepítéshez](https://developers.google.com/gmail/add-ons/how-tos/install-unpublished)
 
-Egyenlőre semmilyen Gmail Add-on-t nem lehet publikálni, mert az egész add-on rendszer friss dolog. Csak fejlesztői bővítményként lehet telepíteni @gmail.com-os accountról.
-
-__*UPDATE:__ @cserkesz.hu-s címről úgy küldhető ilyen aláírás, hogy egy másik @gmail.com-is címhez hozzákötöd a cserkesz.hu-s címet, hogy annak nevében is tudj emial küldeni. Ezt a _Beállítások > Fiókok és importálás > E-mail küldése erről a címről: "Újabb e-mail-cím hozzáadása"_-nál tudod beállítani.
+Egyenlőre semmilyen Gmail Add-on-t nem lehet publikálni, mert az egész add-on rendszer friss dolog. Csak fejlesztői bővítményként lehet telepíteni @gmail.com-os accountról. Cserkesz.hu-s címről úgy küldhető ilyen aláírás, hogy egy másik @gmail.com-is címhez hozzákötöd a cserkesz.hu-s címet, hogy annak nevében is tudj emial küldeni. Ezt a _Beállítások > Fiókok és importálás > E-mail küldése erről a címről: "Újabb e-mail-cím hozzáadása"_-nál tudod beállítani.
 
 
 Deployment/Telepítés ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67w9D1JD5VO__
@@ -65,9 +76,12 @@ Deployment/Telepítés ID: __AKfycbxiSAbxwCAWB9cdOCvt96ml6-72ixIt3aAdfKMVNOAYa67
 3. Másold be a bővítmény telepítési ID-ját (deployment ID fentebb) a __Fejlesztő bővítmények__ szövegdobozra, majd kattins a __Telepítés__-re
 4. Pipáld és fogadd el a felugró ablakot.
 
-Ezután bármelyik üzenetet megnyitva elérhető a bővítmény webes felületen a levél mellett jobb oldali sávon, mobilon a levél alatti legalsó sávban ezen ikonra kattintva: 
+Ezután piszkozatot létrehozva
+- web esetén a küldés gomb sávjában jobb oldalt az általános gombok után az alábbi ikonra kattintva, 
+- mobil esetén a jobb felső sarokban lévő _hárompontos_ menü legalján __MCSSZ aláírás__ menüpontból
+érhető el a bővítmény.
 
-![](https://www.gstatic.com/images/icons/material/system/2x/gesture_black_24dp.png)
+![](http://varosmajor.cserkesz.hu/mcsszsign/icon.png)
 
 ### Telepítést követő első használatkor
 [Eredeti angol nyelvű leírás](https://developers.google.com/gmail/add-ons/how-tos/authorizing)
@@ -75,12 +89,12 @@ Ezután bármelyik üzenetet megnyitva elérhető a bővítmény webes felülete
 Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi rosszaság nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasználóhoz kötve. Érdemes tudni, hogy minden hozzáférés csak ideiglenesen adódik át az adott munkamenetre, így mindig történik authorizáció felhasználó részről.
 
 Azért leírom melyik engedély mire kell:
-- _Futtatás Gmail-bővítményként_: Minden Gmail bövítménynél kötelező ezt a hozzáférést kérni
-- _Email-üzenetek megtekintése_: A megnyitott üzenet azonosítójának lekérésére kell, hogy lehessen válaszlevelet létrehozni.
-- _Piszkozatok kezelése és e-mailek küldése_: Piszkozatok létrehozására kell
-- _Az alkalmazáshoz társított adatok megtekintése és kezelése_: Ez engedéllyel lehet csak eltárolni a kitöltéseket, csak az alkalmazás érheti el, senki más.
+- _Futtatás Gmail-bővítményként_: Minden Gmail bövítménynél kötelező ezt a hozzáférést megadni
+- _Piszkozatok kezelése és e-mailek küldése_: Piszkozatokba való szövegbeillesztéshez szükséges
+- _Emailek metaadatainak megtekintése_: Piszkozatokba való szövegbeillesztéshez szükséges
+- _Az alkalmazáshoz társított adatok megtekintése és kezelése_: Ez engedéllyel lehet csak eltárolni a beírt adatokat, csak az alkalmazás érheti el, senki más.
 
-## Képernyőképek a bővítményről
+## Képernyőképek a bővítményről (régi verzió)
 
 ### Android
 
