@@ -1,7 +1,7 @@
 # MCSSZ Aláírás generáló Gmail Bővítmény
 
 ### Tartalomjegyzék:
-- [Frissítés](https://github.com/daunera/Scout-Signature/blob/master/README.md#koncepci%C3%B3-k%C3%A9pek))
+- [Frissítések](https://github.com/daunera/Scout-Signature/blob/master/README.md#friss%C3%ADt%C3%A9s-20181212)
 - [Koncepció képek](https://github.com/daunera/Scout-Signature/blob/master/README.md#koncepci%C3%B3-k%C3%A9pek)
 - [Felületi elemek leírása](https://github.com/daunera/Scout-Signature/blob/master/README.md#fel%C3%BClet-elemei)
 - [Telepítés és használat](https://github.com/daunera/Scout-Signature/blob/master/README.md#telep%C3%ADt%C3%A9s-%C3%A9s-haszn%C3%A1latba-v%C3%A9tel)
@@ -98,9 +98,8 @@ Azért leírom melyik engedély mire kell:
 
 ### Android
 
-![](https://github.com/daunera/Scout-Signature/blob/master/screens/android1.png)  ![](https://github.com/daunera/Scout-Signature/blob/master/screens/android2.png)  ![](https://github.com/daunera/Scout-Signature/blob/master/screens/android3.png)
+![](https://github.com/daunera/Scout-Signature/blob/master/screens/new_android1.png)  ![](https://github.com/daunera/Scout-Signature/blob/master/screens/new_android2.png)  ![](https://github.com/daunera/Scout-Signature/blob/master/screens/new_android3.png)
 
 ### Web
 
-![](https://github.com/daunera/Scout-Signature/blob/master/screens/web1.png)
-![](https://github.com/daunera/Scout-Signature/blob/master/screens/web2.png)
+![](https://github.com/daunera/Scout-Signature/blob/master/screens/new_web1.png) ![](https://github.com/daunera/Scout-Signature/blob/master/screens/new_web2.png)
