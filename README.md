@@ -25,10 +25,8 @@ A Gmail Add-on keretrendszer fejlesztéseivel lehetőségem adódott alakítani 
 - A képfájlok közös statikus helyre kerültek
 
 ## Koncepció képek
-
-![](https://github.com/daunera/Scout-Signature/blob/master/concept_art/sign01.PNG)
-![](https://github.com/daunera/Scout-Signature/blob/master/concept_art/sign06.PNG)
-![](https://github.com/daunera/Scout-Signature/blob/master/concept_art/sign10.PNG)
+<img src="https://github.com/daunera/Scout-Signature/blob/master/concept_art/sign01.PNG" width="350"> <img src="https://github.com/daunera/Scout-Signature/blob/master/concept_art/sign06.PNG" width="350">
+<img src="https://github.com/daunera/Scout-Signature/blob/master/concept_art/sign10.PNG" width="350"> <img src="https://github.com/daunera/Scout-Signature/blob/master/concept_art/sign11.PNG" width="350">
 
 __[MÉG TÖBB ITT](https://photos.app.goo.gl/nKFlu7gx5Hiv5Vc23)__
 
@@ -94,12 +92,10 @@ Azért leírom melyik engedély mire kell:
 - _Emailek metaadatainak megtekintése_: Piszkozatokba való szövegbeillesztéshez szükséges
 - _Az alkalmazáshoz társított adatok megtekintése és kezelése_: Ez engedéllyel lehet csak eltárolni a beírt adatokat, csak az alkalmazás érheti el, senki más.
 
-## Képernyőképek a bővítményről (régi verzió)
+## Képernyőképek a bővítményről
 
-### Android
-
-![](https://github.com/daunera/Scout-Signature/blob/master/screens/new_android1.png)  ![](https://github.com/daunera/Scout-Signature/blob/master/screens/new_android2.png)  ![](https://github.com/daunera/Scout-Signature/blob/master/screens/new_android3.png)
+### Mobil
+<img src="https://github.com/daunera/Scout-Signature/blob/master/screens/new_android1.jpg" width="210"> <img src="https://github.com/daunera/Scout-Signature/blob/master/screens/new_android2.jpg" width="210"> <img src="https://github.com/daunera/Scout-Signature/blob/master/screens/new_android3.png" width="210">
 
 ### Web
-
-![](https://github.com/daunera/Scout-Signature/blob/master/screens/new_web1.png) ![](https://github.com/daunera/Scout-Signature/blob/master/screens/new_web2.png)
+<img src="https://github.com/daunera/Scout-Signature/blob/master/screens/new_web1.jpg" width="400"> <img src="https://github.com/daunera/Scout-Signature/blob/master/screens/new_web2.jpg" width="400">
