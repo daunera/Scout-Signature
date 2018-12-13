@@ -67,8 +67,8 @@ Egyenlőre nem igazán lehet Gmail Add-on-t publikálni, mert az egész add-on r
 
 
 Deployment/Telepítés ID-k
-- @gmail.com: <b>AKfycbyvVkrNC5pCAFNPjMQ-_UxN-wo0pw6PyE0eSagg3HB99pIIJdRaO87E7kGn5oO7S7u8</b>
-- @cserkesz.hu: <b>AKfycbwVmfbFeg-yfUInbBxxhta9GKZet27dDy-uCGuZ-JZ1JyA6uP_ae6HjNMX51ZupF88HBQ</b>
+- @gmail.com: <b>AKfycbzUyZ529hAJiqo3-JXtbrU4lfK75ymbg60XUExrvej56mhkIGFcT6eHg9CNG_v4nOBE</b>
+- @cserkesz.hu: <b>AKfycbyBaMUbePF0kbXp1WPcok1iQRNVICoyMfuY6vABsjrW2T9yUdDfpspjnR_njxV3VB-MZQ</b>
 
 
 1. [Nyisd meg a Gmail Add-on/Bővítmények beállítás fülét](https://mail.google.com/mail/#settings/addons)
@@ -88,7 +88,7 @@ Ezután piszkozatot létrehozva:
 Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi rosszaság nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasználóhoz kötve. A hozzáférés megadáshoz először ki kell választani a kívánt felhasználót, majd a _Az alkalmazás nincs ellenőrizve_ ablaknál bal oldalt a _Speciális_ gombra kattintani, ahonnan a lenyílő rész alján a _Lépjen ide:..._ linket kell választani. Itt kell az _Engedélyezés_ gombra kattintani.
 
 Azért leírom melyik engedély mire kell:
-- _Futtatás Gmail-bővítményként_: Minden Gmail bövítménynél kötelező ezt a hozzáférést megadni
+- _Futtatás Gmail-bővítményként_: Minden Gmail bővítménynél kötelező ezt a hozzáférést megadni
 - _Piszkozatok kezelése és e-mailek küldése_: Piszkozatokba való szövegbeillesztéshez szükséges
 - _Az alkalmazáshoz társított adatok megtekintése és kezelése_: Ez engedéllyel lehet csak eltárolni a beírt adatokat, csak az alkalmazás érheti el, senki más.
 
