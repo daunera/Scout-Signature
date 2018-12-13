@@ -56,8 +56,8 @@ Legalul a beillesztő gomb található:
 - __Aláírás beszúrása__: Beszúrja oda a piszkozaton belül az aláírást, ahol a kurzor áll. Ha nincs benne a kurzor, akkor legfelülre. Csak sikeres ellenőrzés esetén szúrja be, sikertelenség esetén a hiba okát írja ki. 
 
 Ezen felül a jobb felső sarokban lévő almenüből
-- erre az oldalra mutató segítség érhető el
-- törölni lehet a bővítmény által eltárolt adatokat
+- erre az oldalra mutató segítség érhető el és
+- törölni lehet a bővítmény által eltárolt adatokat.
 
 ## Telepítés és használatba vétel
 [Eredeti angol nyelvű leírás telepítéshez](https://developers.google.com/gmail/add-ons/how-tos/install-unpublished)
@@ -82,7 +82,7 @@ Ezután piszkozatot létrehozva:
 ### Telepítést követő első használatkor
 [Eredeti angol nyelvű leírás](https://developers.google.com/gmail/add-ons/how-tos/authorizing)
 
-Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi rosszaság nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasználóhoz kötve. A hozzáférés megadáshoz először ki kell választani a kívánt felhasználót, majd a _Az alkalmazás nincs ellenőrizve_ ablaknál bal oldalt a _Speciális_ gombra kattintani, ahonnan a lenyílő rész alján a _Lépjen ide:..._ linket kell választani. Itt kell az _Engedélyezés_ gombra kattintani 
+Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy semmi rosszaság nem történik a háttérben. Első használatkor a bővítmény helyén egy "Hozzáférés megadása" gomb jelenik meg, erre kattintva kell megadni az engedélyt felhasználóhoz kötve. A hozzáférés megadáshoz először ki kell választani a kívánt felhasználót, majd a _Az alkalmazás nincs ellenőrizve_ ablaknál bal oldalt a _Speciális_ gombra kattintani, ahonnan a lenyílő rész alján a _Lépjen ide:..._ linket kell választani. Itt kell az _Engedélyezés_ gombra kattintani.
 
 Azért leírom melyik engedély mire kell:
 - _Futtatás Gmail-bővítményként_: Minden Gmail bövítménynél kötelező ezt a hozzáférést megadni
