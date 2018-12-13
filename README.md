@@ -17,8 +17,8 @@ Ezen felül megvan a lehetőséged, hogy a szokásos szövetségi opciók (logó
 - Helyességellenőrzés kijelzése (piros színnel, weben az alsó gomb felett, mobilon az első sorban)
 - Nagyobb egység megadására is van lehetőség az alsó részen (eddig fixen MCSSZ szerepelt itt)
 - Logó mérete külön beviteli mezőbe került
-- A mezők alá tippek kerlültek (mi kerül a helyére ha üres marad egy mező, egyéb megkötések, tippek stb.)
-- Adatok mentése automatikus, nem lehet kikapcsolni (Törölni a jobb felső sarok menüjéből lehet)
+- A mezők alá tippek, leírások kerültek (mi kerül a helyére ha üres marad egy mező, egyéb megkötések, tippek stb.)
+- Adatok mentése automatikus, törölni a jobb felső sarok menüjéből lehet
 - Új logója lett, aláírás helyett egy cserkészliliom, utalva a cserkészaláírás voltára
 - Változott a színkészlet
 - A képfájlok közös statikus helyre kerültek
