@@ -45,7 +45,7 @@ function colorToHex(color){
       return '#5b2919';
     case 'Türkizkék':
       return '#009a93';
-    case 'Városmajor zöld':
+    case 'Majorzöld':
       return '#48B84F';
     default:
       return color;
@@ -114,7 +114,7 @@ function setTitle(title){
   if (!title)
     title = 'cserkesz.hu';
   if (/\S+_\S+/.test(title)){
-    title = title.replace('_','<br>');
+    title = title.replace(/_/g,'<br>');
   }
     
   return title;

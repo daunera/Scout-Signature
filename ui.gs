@@ -1,5 +1,5 @@
 var SECONDARY_COLOR = '#ffa500';
-var COLORS = ['Trendizöld','WOSM-lila','Narancssárga','Világoskék','Piros','Gesztenyebarna','Türkizkék','Városmajor zöld'];
+var COLORS = ['Trendizöld','WOSM-lila','Narancssárga','Világoskék','Piros','Gesztenyebarna','Türkizkék','Majorzöld'];
 
 function buildAddOn(e){
   return [buildUI('', e.clientPlatform)];
@@ -61,7 +61,7 @@ function buildEditSection(status, platform){
                              .addSuggestions(COLORS)))
   .addWidget(buildTextInput('logoUrl','Logó URL','Üresen hagyva: MCSSZ logó'))
   .addWidget(buildTextInput('logoSize','Logó mérete','Pixelben, üresen hagyva: 70 px'))
-  .addWidget(buildTextInput('title','Logó alatti szöveg','Több sor esetén: elsősor_másodiksor, üresen hagyva: cserkesz.hu'))
+  .addWidget(buildTextInput('title','Logó alatti szöveg','Több sor esetén: elsősor_másodiksor stb, üresen hagyva: cserkesz.hu'))
   .addWidget(buildTextInput('titleUrl','Logó alatti szöveg linkje', 'Üresen hagyva: cserkesz.hu'))
   
   if(platform === 'web' || !platform){
