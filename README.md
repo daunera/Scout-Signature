@@ -12,8 +12,7 @@ Ennek az add-on-nak a segítségével a Gmail webes és mobilos felületéről k
 Ezen felül megvan a lehetőséged, hogy a szokásos szövetségi opciók (logó, link, színek) mellett sajátot készíts, saját egységed, csapatod számára.
 
 ## Frissítés (2018.12.12)
-A Gmail Add-on keretrendszer fejlesztéseivel lehetőségem adódott alakítani a programon a használhatóságán.
-- Mostantól a piszkozat létrehozásakkor lehet a szövegtörzsbe beszúrni az aláírást, nem a létrehozáskor
+- Mostantól a piszkozat szerkesztése közben bármikor be lehet szúrni a szövegtörzsbe az aláírást, nem csak a létrehozáskor
 - Helyességellenőrzés (kötelező mezők megléte, számformátumok, email és hexa formátumok)
 - Helyességellenőrzés kijelzése (piros színnel, weben az alsó gomb felett, mobilon az első sorban)
 - Nagyobb egység megadására is van lehetőség az alsó részen (eddig fixen MCSSZ szerepelt itt)
@@ -47,7 +46,7 @@ __Cserkészadatok__
 
 
 __Kinézet__
-- __Szín__: Ajánlatként az ECSET-ben is megtalálható színek szövegesen is kiválaszthatóak. Ezen felül hexadecimális színkódok használhatóak, ezek formátumát ellenőrzi az alkalmazás. Üresen hagyva Trendizöld az alapértelmezett. Színkódokhoz egy hasznos oldal: color-hex.cim
+- __Szín__: Ajánlatként az ECSET-ben is megtalálható színek szövegesen is kiválaszthatóak. Ezen felül hexadecimális színkódok használhatóak, ezek formátumát ellenőrzi az alkalmazás. Üresen hagyva Trendizöld az alapértelmezett. Színkódokhoz egy hasznos oldal: [color-hex.com](https://color-hex.com)
 - __Logó URL__: Saját logó statikusan elérhető url címét add meg. A logó négyzetes legyen, körülbelül 70-150px nagyságú. Ha üresen hagyod, a szövetségi logó kerül ide.
 - __Logó mérete__: Az itt megadott méretet veszi fel a logó is, mértékegysége pixel, üresen hagyva az alapértelmezett érték 70 pixel
 - __Logó alatti szöveg__: A logó alá kerülő szöveg adható meg, általában a logóval összhangban lévő név, egység neve. Üresen hagyva _cserkesz.hu_ kerül ide. Extra opció: Ha több sorba szeretnéd törni a neved a _ karakterrel sor törés érhető el (pl: Okosabb_cserkészek)
@@ -56,7 +55,7 @@ __Kinézet__
 Legalul a beillesztő gomb található:
 - __Aláírás beszúrása__: Beszúrja oda a piszkozaton belül az aláírást, ahol a kurzor áll. Ha nincs benne a kurzor, akkor legfelülre. Csak sikeres ellenőrzés esetén szúrja be, sikertelenség esetén a hiba okát írja ki. 
 
-Ezen felül az jobb felső sarokban lévő almenüből
+Ezen felül a jobb felső sarokban lévő almenüből
 - erre az oldalra mutató segítség érhető el
 - törölni lehet a bővítmény által eltárolt adatokat
 
