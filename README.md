@@ -22,6 +22,7 @@ Ezen felül megvan a lehetőséged, hogy a szokásos szövetségi opciók (logó
 - Új logója lett, aláírás helyett egy cserkészliliom, utalva a cserkészaláírás voltára
 - Változott a színkészlet
 - A képfájlok közös statikus helyre kerültek
+- @cserkesz.hu-s címre is telepíthető
 
 ## Koncepció képek
 <img src="https://github.com/daunera/Scout-Signature/blob/master/concept_art/sign01.PNG" width="350"> <img src="https://github.com/daunera/Scout-Signature/blob/master/concept_art/sign06.PNG" width="350">
@@ -62,10 +63,12 @@ Ezen felül a jobb felső sarokban lévő almenüből
 ## Telepítés és használatba vétel
 [Eredeti angol nyelvű leírás telepítéshez](https://developers.google.com/gmail/add-ons/how-tos/install-unpublished)
 
-Egyenlőre semmilyen Gmail Add-on-t nem lehet publikálni, mert az egész add-on rendszer friss dolog. Csak fejlesztői bővítményként lehet telepíteni @gmail.com-os accountról. Cserkesz.hu-s címről úgy küldhető ilyen aláírás, hogy egy másik @gmail.com-is címhez hozzákötöd a cserkesz.hu-s címet, hogy annak nevében is tudj emial küldeni. Ezt a _Beállítások > Fiókok és importálás > E-mail küldése erről a címről: "Újabb e-mail-cím hozzáadása"_-nál tudod beállítani.
+Egyenlőre nem igazán lehet Gmail Add-on-t publikálni, mert az egész add-on rendszer friss dolog, ezért csak fejlesztői bővítményként lehet telepíteni kicsit kacifántos módon. Egy fejlesztői bővítményt csak abban a domain-ben (tartományban, az a rész ami a @ után van) lehet telepíteni, amibe a fejlesztő is tartozik. Ezért @gmail.com-re és @cserkesz.hu címekre külön ID-kon érhető el a bővítmény:
 
 
-Deployment/Telepítés ID: __AKfycbwLeyyMPZIMZQF_oV8iQb1AzcIU7rkkwPELEAX0Gj43QCRtl7eQMVGzfqZmHgULKDqm__
+Deployment/Telepítés ID-k
+- @gmail.com: __AKfycbwLeyyMPZIMZQF_oV8iQb1AzcIU7rkkwPELEAX0Gj43QCRtl7eQMVGzfqZmHgULKDqm__
+- @cserkesz.hu: __AKfycbxzJbFdpSsRirfiM7HVoBwz5IaDaHlw_OuRQDkSfNhPyKlKhnZx1RUkiqdbs7y-DnooWw__
 
 
 1. [Nyisd meg a Gmail Add-on/Bővítmények beállítás fülét](https://mail.google.com/mail/#settings/addons)
