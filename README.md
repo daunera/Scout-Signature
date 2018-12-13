@@ -67,8 +67,8 @@ Egyenlőre nem igazán lehet Gmail Add-on-t publikálni, mert az egész add-on r
 
 
 Deployment/Telepítés ID-k
-- @gmail.com: __AKfycbwLeyyMPZIMZQF_oV8iQb1AzcIU7rkkwPELEAX0Gj43QCRtl7eQMVGzfqZmHgULKDqm__
-- @cserkesz.hu: __AKfycbxzJbFdpSsRirfiM7HVoBwz5IaDaHlw_OuRQDkSfNhPyKlKhnZx1RUkiqdbs7y-DnooWw__
+- @gmail.com: <b>AKfycbyvVkrNC5pCAFNPjMQ-_UxN-wo0pw6PyE0eSagg3HB99pIIJdRaO87E7kGn5oO7S7u8</b>
+- @cserkesz.hu: <b>AKfycbwVmfbFeg-yfUInbBxxhta9GKZet27dDy-uCGuZ-JZ1JyA6uP_ae6HjNMX51ZupF88HBQ</b>
 
 
 1. [Nyisd meg a Gmail Add-on/Bővítmények beállítás fülét](https://mail.google.com/mail/#settings/addons)
@@ -90,7 +90,6 @@ Hozzáférést kell adni a fiókhoz a bovítménynek, ez biztosít arról, hogy 
 Azért leírom melyik engedély mire kell:
 - _Futtatás Gmail-bővítményként_: Minden Gmail bövítménynél kötelező ezt a hozzáférést megadni
 - _Piszkozatok kezelése és e-mailek küldése_: Piszkozatokba való szövegbeillesztéshez szükséges
-- _Megtekintheti az e-mail-üzenetek metaadatait_: Piszkozatokba való szövegbeillesztéshez szükséges
 - _Az alkalmazáshoz társított adatok megtekintése és kezelése_: Ez engedéllyel lehet csak eltárolni a beírt adatokat, csak az alkalmazás érheti el, senki más.
 
 ## Képernyőképek a bővítményről
