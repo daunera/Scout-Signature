@@ -96,7 +96,6 @@ function setEmail(email){
 }
 
 function setAddress(address){
-  Logger.log(address);
   if (!address)
     address = '1025 Budapest, Tömörkény u. 3/a';
   return address;

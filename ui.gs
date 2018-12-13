@@ -28,7 +28,6 @@ function buildUI(status, platform) {
 function buildEditSection(status, platform){
   var section = CardService.newCardSection();
   
-  Logger.log(platform);
   if(platform === 'android' || platform === 'ios'){
     section.addWidget(CardService.newTextParagraph().setText('<font color="#ff0000">'+status+'</font>'));
   }

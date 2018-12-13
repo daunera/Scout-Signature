@@ -14,8 +14,7 @@ function update(e){
                                 CardService.UpdateDraftBodyType.IN_PLACE_INSERT))
     .build();
     return response;
-  }
-  else{
+  } else{
     return buildUI(check, e.clientPlatform);
   }
 }
@@ -34,17 +33,13 @@ function deleteAction(e){
 
 function getValue(property, option){
   var propertyValue = PropertiesService.getUserProperties().getProperty(property);
-  if(property == 'save'){
-    if(propertyValue == null)
-      return false;
-    return true;
-  }
   if(property == 'level'){
-    if(option == propertyValue || (propertyValue == null && option == ''))
-    return true;
+    if(option == propertyValue || (!propertyValue && option == '')){
+      return true;
+    }
     return false;
   }
-  if(propertyValue == undefined)
+  if(!propertyValue)
     return '';
   return propertyValue;
 }
