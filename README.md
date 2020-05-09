@@ -1,7 +1,7 @@
 # MCSSZ Aláírás generáló Gmail Bővítmény
 
 ### Tartalomjegyzék:
-- [Frissítések](https://github.com/daunera/Scout-Signature/blob/master/README.md#friss%C3%ADt%C3%A9s-20181212)
+- [Frissítések](https://github.com/daunera/Scout-Signature/blob/master/README.md#friss%C3%ADt%C3%A9s-20200509)
 - [Koncepció képek](https://github.com/daunera/Scout-Signature/blob/master/README.md#koncepci%C3%B3-k%C3%A9pek)
 - [Felületi elemek leírása](https://github.com/daunera/Scout-Signature/blob/master/README.md#fel%C3%BClet-elemei)
 - [Telepítés és használat](https://github.com/daunera/Scout-Signature/blob/master/README.md#telep%C3%ADt%C3%A9s-%C3%A9s-haszn%C3%A1latba-v%C3%A9tel)
@@ -10,6 +10,9 @@
 Ennek az add-on-nak a segítségével a Gmail webes és mobilos felületéről könnyen beillesztheted egy-egy levélbe a cserkész email aláírásodat. Így nem kell állandóra beállítani vagy ha csak alkalomról alkalomra használod, nem kell ECSET-ből kimásolnod. Akkor is hasznos lehet, ha egyszerre több megbizatás kapcsán használsz ilyen aláírást, könnyen generálhatsz ilyet is-olyat is.
 
 Ezen felül megvan a lehetőséged, hogy a szokásos szövetségi opciók (logó, link, színek) mellett sajátot készíts, saját egységed, csapatod számára.
+
+## Frissítés (2020.05.09)
+Sajnos a G-Suit Addon frissítés óta a bővítmény nem működik.
 
 ## Frissítés (2018.12.12)
 - Mostantól a piszkozat szerkesztése közben bármikor be lehet szúrni a szövegtörzsbe az aláírást, nem csak a létrehozáskor
